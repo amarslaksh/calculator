@@ -13,7 +13,7 @@ export class CalculateStringComponent implements OnInit {
   }
 
   add(numbers:any) {
-    let values = numbers.split(',');
+    let values = numbers.split(/[,\n]/g);
     let total = 0;
     for(let i=0; i<values.length; i++) {
       total += parseInt(values[i]|| 0);
