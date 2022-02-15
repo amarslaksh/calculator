@@ -13,7 +13,8 @@ export class CalculateStringComponent implements OnInit {
   }
 
   add(numbers:any) {
-    return 0;
+    let values = numbers.split(',');
+    return parseFloat(values[0] || 0) + parseFloat(values[1] || 0);
   }
 
 }
