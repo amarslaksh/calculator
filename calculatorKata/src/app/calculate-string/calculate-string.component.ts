@@ -14,7 +14,11 @@ export class CalculateStringComponent implements OnInit {
 
   add(numbers:any) {
     let values = numbers.split(',');
-    return parseFloat(values[0] || 0) + parseFloat(values[1] || 0);
+    let total = 0;
+    for(let i=0; i<values.length; i++) {
+      total += parseInt(values[i]|| 0);
+    }
+    return total;
   }
 
 }

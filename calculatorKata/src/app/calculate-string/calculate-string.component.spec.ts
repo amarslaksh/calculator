@@ -25,12 +25,10 @@ describe('CalculateStringComponent', () => {
 
   checkResult("", 0);
   checkResult("42", 42);
-  checkResult("1,2", 3);
+  checkResult('1,2', 3);
+  checkResult('1,2,3', 6);
   function checkResult(expression: any, result: any) {
     it('should evaluate' +expression+  'to' +result, function (){
-      expect(component.add(expression)).toEqual(result);
-    });
-    it('evaulate comma separated', function () {
       expect(component.add(expression)).toEqual(result);
     });
   }
