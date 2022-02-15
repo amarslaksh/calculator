@@ -29,6 +29,8 @@ describe('CalculateStringComponent', () => {
   checkResult('1,2,3', 6);
   checkResult('1\n2,3', 6);
   checkResult('1,\n', 1);
+  checkResult("//;\\n1;2", 3);
+  checkResult("-1-2", -3);
   function checkResult(expression: any, result: any) {
     it('should evaluate' +expression+  'to' +result, function (){
       expect(component.add(expression)).toEqual(result);
